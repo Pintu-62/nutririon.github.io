@@ -1,0 +1,538 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --dark: rgb(24, 24, 24); 
+    --light: rgb(244, 235, 208);
+    --p1: rgb(241, 227, 164);
+    --p2: rgb(231, 205, 120);
+    --gold: rgb(222, 182, 75);
+    --font: 'Outfit', sans-serif;
+}
+
+html {
+  font-family: var(--font);
+  overflow-x: hidden;
+}
+
+#all-content {
+    min-width: 1356px;
+    max-width: 1356px;
+    margin: auto;
+  }
+
+/*scroll bar start*/
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--gold);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--p1);
+    border-radius: 10px;
+  }
+  
+  /*scroll bar end*/
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/*Hearder and Navigation bar */
+
+#nav-bar {
+    width: 100%;
+    height: 60px;
+    background-color: var(--gold);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.466);
+    z-index: 1;
+}
+
+.logo {
+    color: var(--dark);
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 a, .cart {
+    text-decoration: none;
+    color: var(--dark);
+    margin-right: 25px;
+    transition: 0.3s ease;
+    font-size: 1rem;
+}
+
+h1 a:hover,
+.cart:hover,
+.logo:hover {
+    color: var(--light);
+}
+
+.search {
+    height: 30px;
+    border-radius: 30px;
+    border: none;
+    background-color: var(--p1);
+    padding: 0 10px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.search:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.466);
+  background-color: var(--light);
+}
+/*spacer*/
+
+#spacer {
+    width: 100%;
+    height: 80px;
+}
+
+form {
+    width: 98%;
+}
+
+.form {
+    width: 80%;
+    height: max-content;
+    margin: 30px auto;
+    border-radius: 1%;
+    background-color: var(--gold);
+    padding: 2%;
+}
+
+.order-value,
+.form-con {
+    height: max-content;
+    width: 96%;
+    padding: 1% 2%;
+    background-color: var(--p2);
+    margin-bottom: 1%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--dark);
+}
+
+.form-con{
+    flex-direction: column;
+}
+
+.value {
+    display: flex;
+}
+
+.get_info {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    color: var(--dark);
+    font-weight: 600;
+} 
+
+.form-title {
+    font-size: 1.6rem;
+    height: max-content;
+    color: rgba(80, 80, 80, 0.753);
+    font-weight: 100;
+    margin-bottom: 2%;
+}
+
+.get_info label {
+    width: 20%;
+}
+
+.get_info input,
+.get_info select,
+.get_info textarea {
+    font-size: 1rem;
+    padding: 1%;
+    width: 80%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    background-color: var(--p1);
+    transition: 0.3s ease;
+}
+
+.get_info textarea {
+    height: 5rem;
+}
+
+.get_info input:hover,
+.get_info select:hover,
+#get_info textarea:hover {
+    background-color: var(--light);
+}
+
+.Address-con {
+    display: flex;
+    margin: 1% 0;
+    width: 100%;
+    align-items: center;
+}
+
+#billing_address {
+    margin-top: 3%;
+}
+
+.selet-button {
+    width: 100%;
+    margin: 2% 0;
+    display: flex;
+}
+
+.button {
+    font-size: 1.6rem;
+    width: 30%;
+    margin: auto;
+    padding: 1% 0;
+    border-radius: 30px;
+    background-color: var(--p2);
+    border: none;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--light);
+}
+
+.check-box {
+    scale: 2;
+    position: relative;
+    right: -540px;
+    margin-bottom: 3%;
+}
+
+.collapse {
+    pointer-events: none;
+}
+
+.collapse input,
+.collapse select {
+    background-color: rgba(151, 151, 151, 0.411);
+}
+
+.form-con2 {
+    width: 98%;
+    background-color: var(--p2);
+    border-radius: 15px;
+    display: flex;
+    color: var(--dark);
+}
+
+#prepaid-method {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border: 1px solid var(--dark);
+}
+
+#payment-options {
+    width: 40%;
+    height: max-content;
+    font-size: 1.6rem;
+}
+
+.opt-pay {
+    height: 8.2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--dark);
+}
+
+.opt1 {
+    border-radius: 15px 0 0 0;
+}
+
+.optlast {
+    border-radius: 0 0 0 15px;
+}
+
+.opt-pay:hover {
+    background-color: var(--light);
+}
+
+#payment-details {
+    height: max-content;
+    width: 60%;
+}
+
+#Card-details-input {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+#Card-details-input label {
+    font-size: 1.6rem;
+    margin-top: 3%;
+    margin-bottom: 1%;
+}
+
+#exp-cvv {
+    width: 100%;
+    display: flex;
+}
+
+#exp-cvv label {
+    margin-top: 3%;
+    margin-right: 1%;
+}
+
+#exp-cvv input {
+    margin-top: 3%;
+    width: 50%;
+    height: fit-content;
+}
+
+.cvv {
+    margin-left: 2%;
+}
+
+#Card-details-input input {
+    font-size: 1rem;
+    width: 98%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 6px;
+}
+
+#Card-details-input button {
+    margin: 5%;
+    font-size: 1.6rem;
+    padding: 10px 0;
+    border-radius: 30px;
+    border: none;
+    background-color: var(--dark);
+    color: var(--light);
+    transition: 0.3s ease;
+}
+
+#Card-details-input button:hover {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+#top-row-for-Wallet {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+
+#second-row-for-Wallet {
+    display: flex;
+    justify-content: center;
+}
+
+#icon_container {
+    min-width: 33%;
+    max-width: 33%;
+    text-align: center;
+}
+
+.icon_img {
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    margin-bottom: 1%;
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
+    transition: 0.3s ease;
+}
+
+.img1 {
+    background-image: url(Payment-options/mobikwik-logo-icon.png);
+}
+
+.img2 {
+    background-image: url(Payment-options/N4tFtfjN_400x400.png);
+}
+
+.img3 {
+    background-image: url(Payment-options/PhonePe_Icons_PNG_Image_vsb1hj.png);
+}
+
+.img4 {
+    background-image: url(Payment-options/pngwing.com.png);
+}
+
+.img5 {
+    background-image: url(Payment-options/vecteezy_paytm-logo-icon-vector_19040306.png);
+}
+
+#icon_container:hover .icon_img {
+    background-size: 98%;
+}
+
+#upi_payment_details {
+    font-size: 1.6rem;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#upi_payment_details input {
+    font-size: 1rem;
+    margin: 20px 0;
+    width: 98%;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 6px;
+}
+
+.submit_button_effect {
+    font-size: 1.6rem;
+    margin: 20px auto;
+    width: 50%;
+    background-color: var(--dark);
+    color: var(--light);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.5s ease;
+    padding: 1%;
+}
+
+.submit_button_effect:hover {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+#COD-method {
+    height: max-content;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+#COD-method h3 {
+    margin: 1% auto;
+}
+
+#COD-method button {
+    margin-top: 10px;
+    min-width: 400px;
+    width: 30%;
+    padding: 10px 0;
+    font-size: 1.6rem;
+    margin: auto;
+}
+
+.pre-colla {
+    position: absolute;
+    opacity: 0;
+    z-index: -2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#footer-logo {
+    margin-bottom: 30px;
+    }
+    
+    #footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--dark);
+    background-color: var(--gold);
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 30px;
+    height: 400px;
+    }
+    
+    #footer .col {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+    
+    #footer h4 {
+    font-size: 30px;
+    padding-bottom: 20px;
+    }
+    
+    #footer p, a {
+        font-size: 1rem;
+        text-decoration: none;
+        margin-bottom: 10px;
+    }
+    
+    #footer .follow {
+        margin-top: 20px;
+    }
+    
+    #footer .follow i, a,
+    #apps {
+        color: var(--dark);
+        padding-right: 4px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+    
+    #footer .follow i:hover,
+    #footer a:hover,
+    #apps:hover {
+        color: var(--light);
+    }
+    
+    #footer .copy {
+        width: 100%;
+        text-align: center;
+    }
