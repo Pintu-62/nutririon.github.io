@@ -328,3 +328,27 @@ fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${sheet_
         document.getElementById('card-8').style.backgroundImage="url("+data.values[7][2]+")";
 
   })};
+
+{ //Product heading button for top selling
+  const buttonRight = document.getElementById('button-right-top');
+    const buttonLeft = document.getElementById('button-left-top');
+
+    buttonRight.onclick = function () {
+      document.getElementById('top-selling').scrollLeft += 150 ;
+    };
+    buttonLeft.onclick = function () {
+      document.getElementById('top-selling').scrollLeft -= 150;
+    };
+}
+
+{ //Product heading button for new launch
+  const buttonRight = document.getElementById('button-right-new');
+    const buttonLeft = document.getElementById('button-left-new');
+
+    buttonRight.onclick = function () {
+      document.getElementById('new-launch').scrollLeft += 150 ;
+    };
+    buttonLeft.onclick = function () {
+      document.getElementById('new-launch').scrollLeft -= 150;
+    };
+}

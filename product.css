@@ -9,7 +9,7 @@
     --p1: rgb(241, 227, 164);
     --p2: rgb(231, 205, 120);
     --gold: rgb(222, 182, 75);
-    --font: 'Outfit', sans-serif;
+    --font: 'Montserrat', sans-serif;
 }
 
 html {
@@ -122,20 +122,60 @@ h1 a:hover,
     display: flex;
 }
 
-.pr-img {
+#product-images {
+    display: flex;
+    position: sticky;
+    height: fit-content;
+    top: 85px;
+}
+
+#list-of-images {
+    width: 100px;
+    height: 450px;
+    margin-left: 20px;
+    margin-top: 40px;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow-x: scroll;
+}
+
+#list-of-images::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+}
+
+.pr-img-small {
+    width: 95%;
+    aspect-ratio: 1;
+    margin: 5px auto;
+    border: 1px solid rgba(18, 38, 32, 0.4);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pr-img-small img {
+    width: 80%;
+    margin: auto;
+}
+
+.main-img {
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid rgba(18, 38, 32, 0.4);
     border-radius: 30px;
     margin: 40px;
-    min-width: 600px;
-    max-width: 600px;
-    min-height: 700px;
-    max-height: 700px;
+    margin-left: 10px;
+    min-width: 450px;
+    max-width: 450px;
+    min-height: 450px;
+    max-height: 450px;
 }
 
-.pr-img img {
+.main-img img {
     width: 90%;
     margin: 30px;
 }
@@ -145,17 +185,18 @@ h1 a:hover,
     margin: 50px 10px;
 }
 
-.title {
-    font-size: 1.6rem;
+#title {
+    font-size: 1rem;
     margin-bottom: 30px;
     color: var(--dark);
 }
 
 .price_disc {
     background-color: var(--p1);
+    position: relative;
     border-radius: 30px;
+    overflow: hidden;
     display: flex;
-    flex-direction: row;
     justify-content: start;
     align-items: center;
     margin-bottom: 20px;
@@ -169,6 +210,7 @@ h1 a:hover,
     justify-content: center;
     text-align: center;
     font-size: 1rem;
+    font-weight: 600;
     padding: 15px;
     margin: 10px;
     background-color: white;
@@ -188,7 +230,7 @@ h1 a:hover,
 .dis {
     text-align: center;
     font-size: 1.6rem;
-    font-weight: 1000;
+    font-weight: 600;
     color: red;
 }
 
@@ -206,11 +248,34 @@ h1 a:hover,
     font-weight: 900;
 }
 
+#Rating {
+    position: absolute;
+    right: 0;
+    background-color: var(--gold);
+    border-radius: 0 10px;
+    top: 0;
+    display: flex;
+    align-items: center;
+}
+
+#stars {
+    margin: 10px;
+}
+
+.checked {
+    color: yellow;
+}
+
+#Rating h1 {
+    font-size: 1.3rem;
+    margin-left: 10px;
+}
+
 .quantity, .size, .flavour {
     font-size: 1rem;
-    margin: 30px 0;
+    margin: 10px 0;
     color: var(--dark);
-    font-weight: 800;
+    font-weight: 600;
 }
 
 select {
@@ -230,21 +295,113 @@ select {
     width: 250px;
 }
 
+#bullet_points {
+    width: 86%;
+    background-color: var(--gold);
+    border-radius: 15px;
+    padding: 2%;
+    margin: 5% 0 0 0;
+}
+
+#bullet_points h1 {
+    color: white;
+}
+
+#points {
+    background-color: var(--p1);
+    border-radius: 15px;
+    padding: 1% 4%;
+}
+
+.point {
+    margin: 3% 0;
+}
+
 .description {
     background-color: var(--p1);
-    border-radius: 30px;
-    margin-bottom: 20px;
-    width: 95%;
+    width: 96%;
     margin: auto;
-    padding: 20px;
+    padding: 1% 2%;
     font-size: 1rem;
-    margin-bottom: 50px;
+    margin-bottom: 3%;
 }
 
 .description .des-title {
     text-align: center;
     color: var(--dark);
     font-size: 1.6rem;
+}
+
+#reviews {  
+    background-color: var(--gold);
+    width: 96%;
+    margin: auto;
+    padding: 0 2% 1% 2%;
+    margin-bottom: 3%;
+}
+
+#avg-reviews {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.avg-rating-star h2 {
+    font-size: 2rem;
+}
+
+.avg-rating-star p {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.line {
+    height: 50px;
+    width: 4px;
+    background-color: var(--dark);
+    margin: 10px 0;
+    border-radius: 4px;
+}
+
+#detailed-rew {
+    background-color: var(--p2);
+    padding: 1%;
+    border-radius: 1rem;
+}
+
+.review {
+    margin-bottom: 2%;
+    border-bottom: 2px solid black;
+    border-radius: 2px;
+    border-radius: 1px;
+    padding-bottom: 10px;
+}
+
+.user-detail-con {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 1%;
+    width: 100%;
+}
+
+.id-con-rew {
+    margin-left: 1%;
+}
+
+.rew-pro-pic {
+    max-width: 50px;
+    max-height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.rew-pro-pic img {
+    width: 100%;
+}
+
+.each-rating-star {
+    display: flex;
+    margin: 0.5% 1%;
 }
 
 #add-to-cart {
